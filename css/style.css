@@ -1,14 +1,26 @@
 /* Colors */
-/* Primary - #000958 */
+/* Primary -   #000958 */
+/* Highlight - #FF5B2E */
 
 /* Fonts */
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('../font/Inter-Regular.ttf')  format('truetype');
+}
+
 @font-face {
     font-family: 'Inter Medium';
     src: url('../font/Inter-Medium.ttf')  format('truetype');
 }
+
 @font-face {
     font-family: 'Inter Semi Bold';
     src: url('../font/Inter-SemiBold.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter Extra Bold';
+    src: url('../font/Inter-ExtraBold.ttf')  format('truetype');
 }
 
 /* Reset */
@@ -21,18 +33,27 @@
 /* Global */
 html, body {
     color: #000958;
+    font-size: 16px;
     font-family: 'Inter Medium', sans-serif;
+    background-color: #FFFEFA;
 }
 
 a {
     color: inherit;
 }
 
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    line-height: 8.125rem;
+    font-family: 'Inter Regular', sans-serif;
+}
+
 /* Utility Classes */
 .container {
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 1520px;
+    max-width: 1560px;
 }
 
 .max-height {
@@ -41,6 +62,9 @@ a {
 
 .flex {
     display: flex;
+}
+
+.flex-center {
     align-items: center;
 }
 
@@ -53,12 +77,44 @@ a {
     background-color: #000958;
 }
 
+.large-heading {
+    font-size: 6rem;
+    letter-spacing: 0;
+    line-height: 8.125rem;
+    font-family: 'Inter Extra Bold', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: solid 2px transparent;
+    font-family: 'Inter Semi Bold', sans-serif;
+    font-size: 1.5rem;
+    transition: border 0.2s;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #FF5B2E;
+    transition: border 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    border: solid 2px #000958;
+}
+
+.btn-primary:hover {
+    background-color: #000958;
+}
+
 /* -------------------------------------- */
 /* BUSINESS INFO  */
 /* -------------------------------------- */
 .business-info {
     height: 48px;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .business-info .contact-details > div {
@@ -77,11 +133,6 @@ a {
 /* -------------------------------------- */
 /* HEADER */
 /* -------------------------------------- */
-/* header {
-    padding-top: 18px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #000958;
-} */
 .header-border {
     min-height: 106px;
     padding-bottom: 8px;
@@ -104,7 +155,7 @@ nav {
 nav a {
     position: relative;
     margin: 0 20px;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
@@ -130,4 +181,52 @@ nav #marker:after {
     width: 2px;
     height: 35px;
     background-color: #000958;
+}
+
+/* -------------------------------------- */
+/* HERO SECTION */
+/* -------------------------------------- */
+.hero {
+    padding: 111px 0;
+    background-image: url('../img/bg-pattern.png');
+    background-repeat: no-repeat;
+    background-position: 80px 90px;
+}
+
+.hero-text h1 {
+    margin-top: 44px;
+}
+
+.hero-text p {
+    max-width: 580px;
+    font-size: 1.875rem;
+    line-height: 3.125rem;
+}
+
+.hero-text .buttons {
+    margin-top: 120px;
+}
+
+.hero-text .buttons .btn-primary {
+    margin-right: 20px;
+}
+
+.hero-text .buttons .btn-primary > img {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    margin-top: 7px;
+    vertical-align: top;
+}
+
+.hero-text .buttons .fas {
+    margin-right: 10px;
+}
+
+.hero-image {
+    max-width: 744px;
+}
+
+.hero-image > img {
+    width: 100%;
 }
