@@ -1,5 +1,133 @@
+/* Colors */
+/* Primary - #000958 */
+
+/* Fonts */
+@font-face {
+    font-family: 'Inter Medium';
+    src: url('../font/Inter-Medium.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'Inter Semi Bold';
+    src: url('../font/Inter-SemiBold.ttf')  format('truetype');
+}
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Global */
+html, body {
+    color: #000958;
+    font-family: 'Inter Medium', sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+/* Utility Classes */
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1520px;
+}
+
+.max-height {
+    height: inherit;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-space {
+    justify-content: space-between;
+}
+
+.bg-primary {
+    color: #fff;
+    background-color: #000958;
+}
+
+/* -------------------------------------- */
+/* BUSINESS INFO  */
+/* -------------------------------------- */
+.business-info {
+    height: 48px;
+    font-size: 12px;
+}
+
+.business-info .contact-details > div {
+    margin-right: 20px;
+}
+
+.business-info i.fas {
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.business-info i.fa-envelope {
+    vertical-align: text-bottom;
+}
+
+/* -------------------------------------- */
+/* HEADER */
+/* -------------------------------------- */
+/* header {
+    padding-top: 18px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000958;
+} */
+.header-border {
+    min-height: 106px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000958;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    font-family: 'Inter Semi Bold', sans-serif;
+}
+
+nav {
+    position: relative;
+    display: flex;
+}
+
+nav a {
+    position: relative;
+    margin: 0 20px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+nav #marker {
+    position: absolute;
+    left: 20px;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background-color: #000958;
+    transition: left 0.5s, width 0.5s;
+}
+
+nav #marker:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 35px;
+    background-color: #000958;
 }
